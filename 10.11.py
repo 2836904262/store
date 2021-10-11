@@ -85,14 +85,6 @@
 #         print("*", end=" ")
 #     print("")
 
-for i in range(1,10):
-    for k in range(1,10-i):
-        print(end=" ")
-    for j in range(1,i):
-        if i>3:
-        print("*",end=" ")
-    print("")
-
 # 乘法表的打印
 # for i in range(1, 10):
 #     for j in range(1, i + 1):
