@@ -1,5 +1,6 @@
 '''
- Frank的商城：
+
+Frank的商城：
         1.准备商品
         2.空的购物车
         3.钱包初始化金钱
@@ -38,14 +39,16 @@ ran = random.randint(50,100)
 reality = ran
 print("您的初始可用余额为%s"%ran)
 print('商品列表')
-for i in range(len(goods)):
+for i in range(len(goods)-1):
     print(i,":",goods[i])
-
+print("点击q或Q结算并退出")
 while True:
     num = input("请选择商品编号：")
     if num.isdigit():  #数字判断
         num = int(num)
-        if num <len(goods): #编号存在判断
+        if num == 4:
+            print('请输入正确的编号')
+        elif num <len(goods): #编号存在判断
             if ran >= goods[num][1]:   #余额是否能买下商品判断
                 # 加入购物车
                 if goods[num][0] in shopcart:
